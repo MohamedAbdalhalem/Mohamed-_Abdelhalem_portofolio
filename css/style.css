@@ -204,6 +204,31 @@ nav a.active {
     color: var(--color-primary);
 }
 
+/* Mobile Menu Button */
+.btn-mobile-menu {
+    display: none;
+    background: transparent;
+    border: none;
+    color: var(--color-text-main);
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: var(--transition);
+    width: 40px;
+    height: 40px;
+    border-radius: 8px;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn-mobile-menu:hover {
+    background: rgba(255, 255, 255, 0.05);
+    color: var(--color-primary);
+}
+
+.light-mode .btn-mobile-menu:hover {
+    background: rgba(0, 0, 0, 0.05);
+}
+
 /* Sections Common */
 section {
     padding: var(--section-padding);
@@ -685,6 +710,60 @@ textarea.form-input {
 
 /* Responsive */
 @media (max-width: 900px) {
+    #about .about-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* Show mobile menu button */
+    .btn-mobile-menu {
+        display: flex;
+    }
+
+    /* Hide desktop nav by default on mobile */
+    nav {
+        position: fixed;
+        top: var(--header-height);
+        left: 50%;
+        transform: translateX(-50%);
+        width: calc(100% - 40px);
+        max-width: var(--container-width);
+        background: var(--color-bg);
+        border-top: 1px solid var(--color-border);
+        padding: 20px 0;
+        max-height: 0;
+        overflow: hidden;
+        opacity: 0;
+        transition: all 0.3s ease, max-height 0.4s ease;
+        z-index: 999;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    }
+
+    /* Show nav when active */
+    nav.active {
+        max-height: 400px;
+        opacity: 1;
+    }
+
+    /* Stack nav items vertically */
+    nav ul {
+        flex-direction: column;
+        gap: 0;
+        padding: 0 20px;
+    }
+
+    nav ul li {
+        border-bottom: 1px solid var(--color-border);
+    }
+
+    nav ul li:last-child {
+        border-bottom: none;
+    }
+
+    nav a {
+        display: block;
+        padding: 15px 0;
+        font-size: 1rem;
+    }
 
     .about-grid,
     .contact-layout,
@@ -692,18 +771,19 @@ textarea.form-input {
         grid-template-columns: 1fr;
     }
 
+    /* About section mobile adjustments */
+    #about .about-grid {
+        gap: 30px;
+    }
+
+    .about-card {
+        padding: 25px;
+    }
+
     h1 {
         font-size: 3.5rem;
     }
 
-    header {
-        padding: 0 20px;
-    }
-
-    nav {
-        display: none;
-        /* Mobile menu to be implemented if requested, keep simple for now */
-    }
 }
 
 /* Glass Button Variant */
@@ -870,4 +950,47 @@ textarea.form-input {
 
 .light-mode .modal-body li:hover {
     background: rgba(0, 0, 0, 0.06);
+}
+
+/* Modal - Mobile polish */
+@media (max-width: 600px) {
+    .modal {
+        padding: 12px;
+    }
+
+    .modal-content {
+        padding: 18px;
+        border-radius: 16px;
+        max-width: 420px;
+        max-height: calc(100vh - 24px);
+        overflow: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .modal-header {
+        margin-bottom: 16px;
+    }
+
+    .modal-header h2 {
+        font-size: 1.15rem;
+        line-height: 1.2;
+    }
+
+    .close-modal {
+        width: 32px;
+        height: 32px;
+        font-size: 1.05rem;
+    }
+
+    .modal-body li {
+        padding: 10px 12px;
+        border-radius: 10px;
+        gap: 10px;
+        margin-bottom: 10px;
+        font-size: 0.95rem;
+    }
+
+    .modal-body li::before {
+        font-size: 0.95rem;
+    }
 }
