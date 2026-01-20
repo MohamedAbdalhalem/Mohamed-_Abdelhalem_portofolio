@@ -900,17 +900,80 @@ button[type="submit"]:disabled {
 }
 
 /* Responsive */
-@media (max-width: 900px) {
-    #about .about-grid {
-        grid-template-columns: 1fr;
+/* Tablet Styles */
+@media (max-width: 1024px) {
+    .section-title {
+        font-size: 2.5rem;
+        margin-bottom: 2.5rem;
     }
 
-    /* Show mobile menu button */
+    h1 {
+        font-size: 4rem;
+    }
+
+    .hero-title {
+        font-size: 1.2rem;
+    }
+
+    .projects-grid {
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        gap: 30px;
+    }
+
+    .services-grid {
+        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+        gap: 25px;
+    }
+
+    .contact-layout {
+        gap: 50px;
+    }
+
+    .hero-visual {
+        width: 500px;
+        height: 500px;
+        min-width: 500px;
+        min-height: 500px;
+        right: -15%;
+    }
+
+    .shape-1 {
+        width: 550px;
+        height: 550px;
+    }
+
+    .shape-2 {
+        width: 500px;
+        height: 500px;
+    }
+
+    .shape-3 {
+        width: 380px;
+        height: 380px;
+    }
+}
+
+/* Mobile and Tablet Styles */
+@media (max-width: 900px) {
+    /* Header */
+    header {
+        padding: 0 10px;
+    }
+
+    .header-content {
+        gap: 10px;
+    }
+
     .btn-mobile-menu {
         display: flex;
     }
 
-    /* Hide desktop nav by default on mobile */
+    .btn-theme {
+        width: 36px;
+        height: 36px;
+        font-size: 1.1rem;
+    }
+
     nav {
         position: fixed;
         top: var(--header-height);
@@ -919,7 +982,10 @@ button[type="submit"]:disabled {
         width: calc(100% - 40px);
         max-width: var(--container-width);
         background: var(--color-bg);
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
         border-top: 1px solid var(--color-border);
+        border-radius: 0 0 16px 16px;
         padding: 20px 0;
         max-height: 0;
         overflow: hidden;
@@ -929,13 +995,11 @@ button[type="submit"]:disabled {
         box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
     }
 
-    /* Show nav when active */
     nav.active {
         max-height: 400px;
         opacity: 1;
     }
 
-    /* Stack nav items vertically */
     nav ul {
         flex-direction: column;
         gap: 0;
@@ -956,14 +1020,83 @@ button[type="submit"]:disabled {
         font-size: 1rem;
     }
 
-    .about-grid,
-    .contact-layout,
-    .achievements-grid {
-        grid-template-columns: 1fr;
+    /* Cover/Hero Section */
+    #cover {
+        min-height: 100vh;
+        padding-top: var(--header-height);
     }
 
-    /* About section mobile adjustments */
+    h1 {
+        font-size: 3rem;
+        line-height: 1.2;
+    }
+
+    .hero-greeting {
+        font-size: 1.1rem;
+    }
+
+    .hero-title {
+        font-size: 1.1rem;
+        margin-bottom: 30px;
+    }
+
+    .hero-cta {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .hero-cta .btn {
+        width: 100%;
+        text-align: center;
+        margin-left: 0 !important;
+    }
+
+    .hero-visual {
+        width: 400px;
+        height: 400px;
+        min-width: 400px;
+        min-height: 400px;
+        right: -20%;
+        opacity: 0.7;
+    }
+
+    .shape {
+        filter: blur(80px);
+    }
+
+    .shape-1 {
+        width: 450px;
+        height: 450px;
+        top: -150px;
+        right: -100px;
+    }
+
+    .shape-2 {
+        width: 400px;
+        height: 400px;
+        left: -100px;
+    }
+
+    .shape-3 {
+        width: 300px;
+        height: 300px;
+        right: 10%;
+    }
+
+    /* Section Titles */
+    .section-title {
+        font-size: 2rem;
+        margin-bottom: 2rem;
+    }
+
+    .section-title::after {
+        width: 50px;
+        height: 3px;
+    }
+
+    /* About Section */
     #about .about-grid {
+        grid-template-columns: 1fr;
         gap: 30px;
     }
 
@@ -971,10 +1104,96 @@ button[type="submit"]:disabled {
         padding: 25px;
     }
 
-    h1 {
-        font-size: 3.5rem;
+    .about-text p {
+        font-size: 1rem;
     }
 
+    /* Education Section */
+    .edu-item {
+        padding-left: 25px;
+        margin-bottom: 30px;
+    }
+
+    .edu-degree {
+        font-size: 1.3rem;
+    }
+
+    /* Skills Section */
+    .skills-grid {
+        grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+        gap: 15px;
+    }
+
+    .skill-tag {
+        padding: 15px;
+        font-size: 0.9rem;
+    }
+
+    .skill-tag img {
+        width: 35px;
+    }
+
+    /* Services Section */
+    .services-grid {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+    .service-card {
+        padding: 30px;
+    }
+
+    .service-title {
+        font-size: 1.3rem;
+    }
+
+    /* Projects Section */
+    .projects-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .project-info {
+        padding: 25px;
+    }
+
+    /* Contact Section */
+    .contact-layout {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .contact-form-container {
+        padding: 30px;
+    }
+
+    .contact-value {
+        font-size: 1.3rem;
+    }
+
+    .contact-value-wrapper {
+        flex-wrap: wrap;
+    }
+
+    /* Grid Layouts */
+    .about-grid,
+    .achievements-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* Section Padding */
+    section {
+        padding: 60px 0;
+    }
+
+    #contact {
+        margin-top: 60px;
+    }
+
+    /* Footer */
+    footer {
+        padding: 30px 0;
+    }
 }
 
 /* Glass Button Variant */
@@ -1144,7 +1363,218 @@ button[type="submit"]:disabled {
 }
 
 /* Modal - Mobile polish */
+/* Small Mobile Styles */
 @media (max-width: 600px) {
+    /* Cover/Hero Section */
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero-greeting {
+        font-size: 1rem;
+        margin-bottom: 15px;
+    }
+
+    .hero-title {
+        font-size: 1rem;
+        margin-bottom: 25px;
+    }
+
+    .hero-visual {
+        width: 300px;
+        height: 300px;
+        min-width: 300px;
+        min-height: 300px;
+        right: -30%;
+        opacity: 0.5;
+    }
+
+    .shape-1 {
+        width: 350px;
+        height: 350px;
+        top: -100px;
+        right: -80px;
+    }
+
+    .shape-2 {
+        width: 300px;
+        height: 300px;
+        left: -80px;
+    }
+
+    .shape-3 {
+        width: 250px;
+        height: 250px;
+        right: 5%;
+    }
+
+    .shape {
+        filter: blur(60px);
+    }
+
+    /* Section Titles */
+    .section-title {
+        font-size: 1.75rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .section-title::after {
+        width: 40px;
+        height: 3px;
+    }
+
+    /* Header */
+    .logo {
+        font-size: 1.5rem;
+    }
+
+    .btn-white {
+        padding: 10px 20px;
+        font-size: 0.9rem;
+    }
+
+    .header-content a.btn-white {
+        display: none;
+    }
+
+    /* About Section */
+    .about-card {
+        padding: 20px;
+    }
+
+    .about-text p {
+        font-size: 0.95rem;
+    }
+
+    /* Education */
+    .edu-item {
+        padding-left: 20px;
+        margin-bottom: 25px;
+    }
+
+    .edu-year {
+        font-size: 0.85rem;
+    }
+
+    .edu-degree {
+        font-size: 1.1rem;
+    }
+
+    /* Skills */
+    .skills-grid {
+        grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+        gap: 12px;
+    }
+
+    .skill-tag {
+        padding: 12px;
+        font-size: 0.85rem;
+    }
+
+    .skill-tag img {
+        width: 30px;
+    }
+
+    /* Services */
+    .service-card {
+        padding: 25px;
+    }
+
+    .service-icon {
+        font-size: 1.5rem;
+    }
+
+    .service-title {
+        font-size: 1.2rem;
+        margin-bottom: 12px;
+    }
+
+    /* Projects */
+    .project-info {
+        padding: 20px;
+    }
+
+    .project-visual {
+        height: 200px;
+    }
+
+    .project-tags {
+        gap: 8px;
+        margin-bottom: 12px;
+    }
+
+    .project-tag {
+        font-size: 0.75rem;
+        padding: 4px 8px;
+    }
+
+    /* Contact Section */
+    .contact-layout h2 {
+        font-size: 2rem;
+        margin-bottom: 15px;
+    }
+
+    .contact-form-container {
+        padding: 25px 20px;
+        border-radius: 20px;
+    }
+
+    .form-group {
+        margin-bottom: 20px;
+    }
+
+    .form-input {
+        padding: 14px 18px;
+        font-size: 0.95rem;
+    }
+
+    textarea.form-input {
+        min-height: 120px;
+    }
+
+    .contact-value {
+        font-size: 1.1rem;
+    }
+
+    .contact-icon-btn {
+        width: 36px;
+        height: 36px;
+        min-width: 36px;
+        min-height: 36px;
+        font-size: 1.3rem;
+    }
+
+    /* Buttons */
+    .btn {
+        padding: 10px 24px;
+        font-size: 0.9rem;
+    }
+
+    .hero-cta .btn {
+        padding: 14px 28px;
+    }
+
+    /* Section Padding */
+    section {
+        padding: 50px 0;
+    }
+
+    #contact {
+        margin-top: 50px;
+    }
+
+    /* Container */
+    .container {
+        padding: 0 15px;
+    }
+
+    /* Footer */
+    footer {
+        padding: 25px 0;
+        font-size: 0.85rem;
+    }
+
+    /* Modal */
     .modal {
         padding: 12px;
     }
@@ -1183,5 +1613,36 @@ button[type="submit"]:disabled {
 
     .modal-body li::before {
         font-size: 0.95rem;
+    }
+}
+
+/* Extra Small Mobile Styles */
+@media (max-width: 400px) {
+    h1 {
+        font-size: 2rem;
+    }
+
+    .section-title {
+        font-size: 1.5rem;
+    }
+
+    .hero-visual {
+        display: none;
+    }
+
+    .shape {
+        opacity: 0.3;
+    }
+
+    .skills-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .contact-layout h2 {
+        font-size: 1.75rem;
+    }
+
+    .contact-form-container {
+        padding: 20px 15px;
     }
 }
