@@ -86,28 +86,136 @@ document.addEventListener('DOMContentLoaded', () => {
 
     animElements.forEach(el => observer.observe(el));
 
-    // Contact Form Handling (JS Mailto Fallback)
+    // Contact Form Handling with Inline Validation
     const contactForm = document.querySelector('form');
     if (contactForm) {
+        // Create error message containers for each field
+        const formGroups = contactForm.querySelectorAll('.form-group');
+        formGroups.forEach(group => {
+            const errorDiv = document.createElement('div');
+            errorDiv.className = 'form-error';
+            group.appendChild(errorDiv);
+        });
+
+        // Helper function to show error
+        function showError(fieldName, message) {
+            const field = contactForm.querySelector(`[name="${fieldName}"]`);
+            const formGroup = field.closest('.form-group');
+            const errorDiv = formGroup.querySelector('.form-error');
+            
+            field.classList.add('error');
+            errorDiv.textContent = message;
+            errorDiv.style.display = 'flex';
+        }
+
+        // Helper function to clear error
+        function clearError(fieldName) {
+            const field = contactForm.querySelector(`[name="${fieldName}"]`);
+            const formGroup = field.closest('.form-group');
+            const errorDiv = formGroup.querySelector('.form-error');
+            
+            field.classList.remove('error');
+            errorDiv.textContent = '';
+            errorDiv.style.display = 'none';
+        }
+
+        // Email validation regex
+        function isValidEmail(email) {
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            return emailRegex.test(email);
+        }
+
+        // Real-time validation on input
+        const nameInput = contactForm.querySelector('input[name="name"]');
+        const emailInput = contactForm.querySelector('input[name="email"]');
+        const messageInput = contactForm.querySelector('textarea[name="message"]');
+
+        if (nameInput) {
+            nameInput.addEventListener('input', function() {
+                if (this.value.trim().length > 0) {
+                    clearError('name');
+                }
+            });
+        }
+
+        if (emailInput) {
+            emailInput.addEventListener('input', function() {
+                if (this.value.trim().length > 0 && isValidEmail(this.value.trim())) {
+                    clearError('email');
+                }
+            });
+        }
+
+        if (messageInput) {
+            messageInput.addEventListener('input', function() {
+                if (this.value.trim().length > 0) {
+                    clearError('message');
+                }
+            });
+        }
+
+        // Form submission with validation
         contactForm.addEventListener('submit', function (e) {
             e.preventDefault();
 
-            const name = this.querySelector('input[name="name"]').value;
-            const email = this.querySelector('input[name="email"]').value;
-            const message = this.querySelector('textarea[name="message"]').value;
+            let isValid = true;
+            const name = nameInput ? nameInput.value.trim() : '';
+            const email = emailInput ? emailInput.value.trim() : '';
+            const message = messageInput ? messageInput.value.trim() : '';
 
-            if (!name || !email || !message) {
-                alert('Please fill in all fields.');
-                return;
+            // Clear all previous errors
+            clearError('name');
+            clearError('email');
+            clearError('message');
+
+            // Validate name
+            if (!name) {
+                showError('name', 'Please enter your name');
+                isValid = false;
+            } else if (name.length < 2) {
+                showError('name', 'Name must be at least 2 characters');
+                isValid = false;
             }
 
-            // Visual feedback for the user
-            alert("Opening your email client to send the message...");
+            // Validate email
+            if (!email) {
+                showError('email', 'Please enter your email address');
+                isValid = false;
+            } else if (!isValidEmail(email)) {
+                showError('email', 'Please enter a valid email address');
+                isValid = false;
+            }
 
-            const subject = `Portfolio Contact from ${name}`;
-            const body = `Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`;
+            // Validate message
+            if (!message) {
+                showError('message', 'Please enter your message');
+                isValid = false;
+            } else if (message.length < 10) {
+                showError('message', 'Message must be at least 10 characters');
+                isValid = false;
+            }
 
-            window.location.href = `mailto:mohamed3ab7alem@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+            // If form is valid, submit
+            if (isValid) {
+                // Change button to show loading state
+                const submitBtn = contactForm.querySelector('button[type="submit"]');
+                const originalText = submitBtn.textContent;
+                submitBtn.textContent = 'Opening Gmail...';
+                submitBtn.disabled = true;
+
+                const subject = `Portfolio Contact from ${name}`;
+                const body = `Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`;
+
+                // Open Gmail compose window
+                const gmailUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=mohamed3ab7alem@gmail.com&su=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+                window.open(gmailUrl, '_blank');
+
+                // Reset button after a short delay
+                setTimeout(() => {
+                    submitBtn.textContent = originalText;
+                    submitBtn.disabled = false;
+                }, 2000);
+            }
         });
     }
 
