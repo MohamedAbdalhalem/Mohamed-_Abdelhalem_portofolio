@@ -187,6 +187,8 @@ header {
     font-weight: 800;
     color: var(--color-text-main);
     letter-spacing: -1px;
+    text-decoration: none;
+    display: inline-block;
 }
 
 nav ul {
