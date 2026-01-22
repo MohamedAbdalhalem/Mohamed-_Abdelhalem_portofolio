@@ -61,14 +61,14 @@ document.addEventListener('DOMContentLoaded', () => {
     }, observerOptions);
 
     // Add fade-up animation class to sections and cards
-    const animElements = document.querySelectorAll('.section-title, .about-text, .service-card, .project-card, .skill-tag, .achievement-card');
+    const animElements = document.querySelectorAll('.section-title, .about-text, .service-card, .project-card, .skill-tag, .achievement-card, .testimonial-card');
 
     // Add CSS for the animation dynamically if not present
     if (!document.getElementById('anim-styles')) {
         const style = document.createElement('style');
         style.id = 'anim-styles';
         style.textContent = `
-            .section-title, .about-text, .service-card, .project-card, .skill-tag, .achievement-card {
+            .section-title, .about-text, .service-card, .project-card, .skill-tag, .achievement-card, .testimonial-card {
                 opacity: 0;
                 transform: translateY(30px);
                 transition: opacity 0.6s ease-out, transform 0.6s ease-out;
@@ -80,6 +80,8 @@ document.addEventListener('DOMContentLoaded', () => {
             .skill-tag { transition-delay: 0.1s; }
             .service-card:nth-child(2) { transition-delay: 0.1s; }
             .service-card:nth-child(3) { transition-delay: 0.2s; }
+            .testimonial-card:nth-child(2) { transition-delay: 0.1s; }
+            .testimonial-card:nth-child(3) { transition-delay: 0.2s; }
         `;
         document.head.appendChild(style);
     }
