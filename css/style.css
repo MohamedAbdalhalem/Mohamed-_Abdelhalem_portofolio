@@ -541,6 +541,18 @@ h1 span.gradient-text {
     margin-bottom: 10px;
 }
 
+.edu-degree a {
+    text-decoration: none;
+    color: inherit;
+    transition: var(--transition);
+    cursor: pointer;
+}
+
+.edu-degree a:hover {
+    color: var(--color-primary);
+    text-decoration: underline;
+}
+
 .skills-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
