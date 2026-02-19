@@ -23,8 +23,8 @@
                     <li><a href="#skills">Skills</a></li>
                     <li><a href="#services">Services</a></li>
                     <li><a href="#projects">Projects</a></li>
+                    <li><a href="#achievements">Achievements</a></li>
                     <li><a href="#testimonials">Testimonials</a></li>
-                    <li><a href="#contact">Contact</a></li>
                 </ul>
             </nav>
             <div style="display: flex; align-items: center; gap: 15px;">
@@ -53,12 +53,12 @@
                     <span class="hero-greeting">Hi, I'm</span>
                     <h1>Mohamed <span class="gradient-text">Abdelhalem.</span></h1>
                     <p class="hero-subtitle">Frontend Developer</p>
-                    <p class="hero-title">I help Businesses avoid future technical debt by building scalable web applications with Clean Code to achieve long-term stability and easy-to-maintain digital solutions.</p>
+                    <p class="hero-title">I help Businesses avoid future technical</p>
                     <div class="hero-cta">
                         <a href="Mohamed_Abdalhalim_Ali_CV .pdf" download class="btn btn-primary">
                             Download CV <i class="fa-solid fa-download"></i>
                         </a>
-                        <a href="#contact" class="btn btn-outline">Get in Touch</a>
+                        <a href="#projects" class="btn btn-outline">View Projects</a>
                     </div>
                 </div>
                 <div class="hero-right">
@@ -82,37 +82,68 @@
     <!-- 2. About Section -->
     <section id="about">
         <div class="container">
-            <div class="section-title">About Me</div>
-            <div class="about-grid">
-                <div class="about-text">
-                    <p>I’m a Front-End Developer specializing in React and TypeScript. I started my journey with HTML
-                        and CSS, where I developed a strong interest in building clean, well-structured UI and turning
-                        designs into real, accurate web interfaces.</p>
-                    <p>I don’t just build websites; I build digital growth engines. As a Front-End Developer specializing in React and Next.js, I bridge the gap between complex code and seamless user experiences.</p>
-                    <p>My mission is to help businesses and freelancers transform their vision into high-converting platforms. By leveraging Tailwind CSS for modern styling and prioritizing SEO and Performance, I ensure your site isn't just a pretty face—but a powerful tool that ranks on Google and drives sales.</p>
-
-
+            <div class="about-header">
+                <div class="section-title">About Me</div>
+            </div>
+            
+            <div class="about-layout">
+                <div class="about-info">
+                    <h2 class="about-greeting">Hello, I'm Mohamed Abdelhalem <span class="wave">👋</span></h2>
+                    <p class="about-description">
+                        I'm a front-end specialist. I deliver a unique digital experience that blends creativity 
+                        and high performance, turning your website visitors into loyal customers.
+                    </p>
+                    <p class="about-description">
+                        I specialize in building modern, efficient web applications using cutting-edge 
+                        technologies. I have a genuine passion for developing innovative technical 
+                        solutions that solve real-world problems.
+                    </p>
+                    
+                    <div class="stats-grid">
+                        <div class="stat-card">
+                            <div class="stat-num">20+</div>
+                            <div class="stat-label">Projects Completed</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-num">15+</div>
+                            <div class="stat-label">Satisfied Clients</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-num">5+</div>
+                            <div class="stat-label">Years Experience</div>
+                        </div>
+                    </div>
                 </div>
-                <div class="about-card">
-                    <h3>At a Glance</h3>
-                    <ul style="margin-top: 20px; display: flex; flex-direction: column; gap: 15px;">
-                        <li><i class="fa-solid fa-location-dot" style="color: var(--color-primary); width: 25px;"></i>
-                            Tanta, Egypt</li>
-                        <li><i class="fa-solid fa-language" style="color: var(--color-primary); width: 25px;"></i>
-                            Arabic (Native), English (A2)</li>
-                        <li><i class="fa-solid fa-bolt" style="color: var(--color-primary); width: 25px;"></i> Available
-                            for freelance</li>
-                        <li style="display: flex; align-items: center; gap: 20px;">
-                            <a href="https://www.linkedin.com/in/mohamed-abdelhalem-a158922a6/" target="_blank"
-                                style="text-decoration: none; color: inherit; display: flex; align-items: center; gap: 8px;"><i
-                                    class="fa-brands fa-linkedin" style="color: var(--color-primary); width: 25px;"></i>
-                                LinkedIn</a>
-                            <a href="https://github.com/MohamedAbdalhalem" target="_blank"
-                                style="text-decoration: none; color: inherit; display: flex; align-items: center; gap: 8px;"><i
-                                    class="fa-brands fa-github" style="color: var(--color-primary); width: 25px;"></i>
-                                GitHub</a>
-                        </li>
-                    </ul>
+
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fa-solid fa-rocket"></i>
+                        </div>
+                        <h3>High Performance</h3>
+                        <p>Fast and efficient applications</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fa-solid fa-paintbrush"></i>
+                        </div>
+                        <h3>Beautiful Design</h3>
+                        <p>Modern user interfaces</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fa-solid fa-shield-halved"></i>
+                        </div>
+                        <h3>High Security</h3>
+                        <p>Complete data protection</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fa-solid fa-mobile-screen"></i>
+                        </div>
+                        <h3>Responsive</h3>
+                        <p>Works on all devices</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -154,32 +185,104 @@
     <!-- 4. Skills -->
     <section id="skills">
         <div class="container">
-            <div class="section-title">Core Skills</div>
-            <div class="skills-grid">
-                <div class="skill-tag"><img src="icons/icons8-react.svg" alt="React" width="40"
-                        style="margin: 0 auto 10px; display: block;">React</div>
-                <div class="skill-tag"><img src="icons/icons8-nextjs.svg" alt="Next.js" width="40"
-                        style="margin: 0 auto 10px; display: block;">Next.js</div>
-                <div class="skill-tag"><img src="icons/icons8-typescript.svg" alt="TypeScript" width="40"
-                        style="margin: 0 auto 10px; display: block;">TypeScript</div>
-                <div class="skill-tag"><img src="icons/icons8-javascript.svg" alt="JavaScript" width="40"
-                        style="margin: 0 auto 10px; display: block;">JavaScript</div>
-                <div class="skill-tag"><img src="icons/icons8-redux.svg" alt="Redux" width="40"
-                        style="margin: 0 auto 10px; display: block;">Redux</div>
-                <div class="skill-tag"><img src="icons/icons8-html-5.svg" alt="HTML5" width="40"
-                        style="margin: 0 auto 10px; display: block;">HTML5</div>
-                <div class="skill-tag"><img src="icons/icons8-css3.svg" alt="CSS3" width="40"
-                        style="margin: 0 auto 10px; display: block;">CSS3</div>
-                <div class="skill-tag"><img src="icons/icons8-tailwind-css.svg" alt="Tailwind" width="40"
-                        style="margin: 0 auto 10px; display: block;">Tailwind</div>
-                <div class="skill-tag"><img src="icons/icons8-sass.svg" alt="Sass" width="40"
-                        style="margin: 0 auto 10px; display: block;">Sass</div>
-                <div class="skill-tag"><img src="icons/icons8-bootstrap.svg" alt="Bootstrap" width="40"
-                        style="margin: 0 auto 10px; display: block;">Bootstrap</div>
-                <div class="skill-tag"><img src="icons/icons8-jquery.svg" alt="jQuery" width="40"
-                        style="margin: 0 auto 10px; display: block;">jQuery</div>
-                <div class="skill-tag"><img src="icons/icons8-github-96.svg" alt="GitHub" width="40"
-                        style="margin: 0 auto 10px; display: block;">GitHub</div>
+            <div class="section-title">Skills</div>
+            <div class="skills-container">
+                <div class="skills-category">
+                    <h3 class="skills-subtitle">Frontend Skills</h3>
+                    <div class="skills-grid">
+                        <div class="skill-tag">
+                            <img src="icons/icons8-react.svg" alt="React" width="40" style="margin: 0 auto 10px; display: block;">
+                            <div class="skill-name">React</div>
+                            <p class="skill-desc">Building dynamic and interactive user interfaces with components.</p>
+                        </div>
+                        <div class="skill-tag">
+                            <img src="icons/icons8-nextjs.svg" alt="Next.js" width="40" style="margin: 0 auto 10px; display: block;">
+                            <div class="skill-name">Next.js</div>
+                            <p class="skill-desc">Developing SEO-friendly and high-performance SSR apps.</p>
+                        </div>
+                        <div class="skill-tag">
+                            <img src="icons/icons8-typescript.svg" alt="TypeScript" width="40" style="margin: 0 auto 10px; display: block;">
+                            <div class="skill-name">TypeScript</div>
+                            <p class="skill-desc">Ensuring code reliability with robust static typing.</p>
+                        </div>
+                        <div class="skill-tag">
+                            <img src="icons/icons8-javascript.svg" alt="JavaScript" width="40" style="margin: 0 auto 10px; display: block;">
+                            <div class="skill-name">JavaScript</div>
+                            <p class="skill-desc">Creating logical and interactive web experiences.</p>
+                        </div>
+                        <div class="skill-tag">
+                            <img src="icons/icons8-redux.svg" alt="Redux" width="40" style="margin: 0 auto 10px; display: block;">
+                            <div class="skill-name">Redux</div>
+                            <p class="skill-desc">Managing complex application state efficiently.</p>
+                        </div>
+                        <div class="skill-tag">
+                            <img src="icons/icons8-html-5.svg" alt="HTML5" width="40" style="margin: 0 auto 10px; display: block;">
+                            <div class="skill-name">HTML5</div>
+                            <p class="skill-desc">Structuring modern, semantic, and accessible content.</p>
+                        </div>
+                        <div class="skill-tag">
+                            <img src="icons/icons8-css3.svg" alt="CSS3" width="40" style="margin: 0 auto 10px; display: block;">
+                            <div class="skill-name">CSS3</div>
+                            <p class="skill-desc">Designing beautiful and responsive layouts.</p>
+                        </div>
+                        <div class="skill-tag">
+                            <img src="icons/icons8-tailwind-css.svg" alt="Tailwind" width="40" style="margin: 0 auto 10px; display: block;">
+                            <div class="skill-name">Tailwind</div>
+                            <p class="skill-desc">Building rapid, utility-first, and custom designs.</p>
+                        </div>
+                        <div class="skill-tag">
+                            <img src="icons/icons8-sass.svg" alt="Sass" width="40" style="margin: 0 auto 10px; display: block;">
+                            <div class="skill-name">Sass</div>
+                            <p class="skill-desc">Writing scalable and maintainable CSS with power.</p>
+                        </div>
+                        <div class="skill-tag">
+                            <img src="icons/icons8-bootstrap.svg" alt="Bootstrap" width="40" style="margin: 0 auto 10px; display: block;">
+                            <div class="skill-name">Bootstrap</div>
+                            <p class="skill-desc">Creating fast and responsive mobile-first designs.</p>
+                        </div>
+                        <div class="skill-tag">
+                            <img src="icons/icons8-jquery.svg" alt="jQuery" width="40" style="margin: 0 auto 10px; display: block;">
+                            <div class="skill-name">jQuery</div>
+                            <p class="skill-desc">Simplifying DOM manipulation and event handling.</p>
+                        </div>
+                        <div class="skill-tag">
+                            <img src="icons/icons8-github-96.svg" alt="GitHub" width="40" style="margin: 0 auto 10px; display: block;">
+                            <div class="skill-name">GitHub</div>
+                            <p class="skill-desc">Managing version control and collaborating on projects.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skills-category">
+                    <h3 class="skills-subtitle">Communication Skills</h3>
+                    <div class="skills-grid">
+                        <div class="skill-tag">
+                            <i class="fa-solid fa-comments skill-icon-fa"></i>
+                            <div class="skill-name">Effective Communication</div>
+                            <p class="skill-desc">Confident and clear interaction with stakeholders and teammates.</p>
+                        </div>
+                        <div class="skill-tag">
+                            <i class="fa-solid fa-users-gear skill-icon-fa"></i>
+                            <div class="skill-name">Team Collaboration</div>
+                            <p class="skill-desc">Contributing effectively within cross-functional and Agile teams.</p>
+                        </div>
+                        <div class="skill-tag">
+                            <i class="fa-solid fa-lightbulb skill-icon-fa"></i>
+                            <div class="skill-name">Problem Solving</div>
+                            <p class="skill-desc">Analytical thinking to resolve complex technical and UX challenges.</p>
+                        </div>
+                        <div class="skill-tag">
+                            <i class="fa-solid fa-arrows-rotate skill-icon-fa"></i>
+                            <div class="skill-name">Adaptability</div>
+                            <p class="skill-desc">Quickly pivoting to new tools, frameworks, and project requirements.</p>
+                        </div>
+                        <div class="skill-tag">
+                            <i class="fa-solid fa-clock skill-icon-fa"></i>
+                            <div class="skill-name">Time Management</div>
+                            <p class="skill-desc">Organizing tasks and meeting deadlines in high-pressure environments.</p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -189,46 +292,76 @@
         <div class="container">
             <div class="section-title">Services</div>
             <div class="services-grid">
+                <!-- Service 1 -->
                 <div class="service-card">
-                    <div class="service-icon"><i class="fa-brands fa-react"></i></div>
-                    <h3 class="service-title">Front-End Development (React & TypeScript)</h3>
-                    <p>Building modern, scalable, and high-performance web applications using React, TypeScript, and
-                        clean component-based architecture.</p>
+                    <div class="service-icon"><i class="fa-solid fa-code"></i></div>
+                    <h3 class="service-title">Front-End Development</h3>
+                    <p class="service-desc">Building dynamic, responsive, and high-performance user interfaces using modern frontend technologies.</p>
+                    <ul class="service-list">
+                        <li class="service-item">React & Next.js Apps</li>
+                        <li class="service-item">TypeScript Integration</li>
+                        <li class="service-item">State Management (Redux/Context)</li>
+                    </ul>
                 </div>
+
+                <!-- Service 2 -->
                 <div class="service-card">
                     <div class="service-icon"><i class="fa-solid fa-wand-magic-sparkles"></i></div>
                     <h3 class="service-title">UI to Code Conversion</h3>
-                    <p>Converting UI/UX designs (Figma, Adobe XD) into pixel-perfect, responsive, and fully functional
-                        web interfaces.</p>
+                    <p class="service-desc">Converting UI/UX designs into pixel-perfect, responsive, and fully functional web interfaces.</p>
+                    <ul class="service-list">
+                        <li class="service-item">Figma to React/HTML</li>
+                        <li class="service-item">Pixel-Perfect Implementation</li>
+                        <li class="service-item">Design System Alignment</li>
+                    </ul>
                 </div>
+
+                <!-- Service 3 -->
                 <div class="service-card">
                     <div class="service-icon"><i class="fa-solid fa-mobile-screen-button"></i></div>
-                    <h3 class="service-title">Responsive & Modern UI Design</h3>
-                    <p>Creating responsive layouts that work smoothly across all devices using Tailwind CSS and
-                        Bootstrap.</p>
+                    <h3 class="service-title">Responsive UI Design</h3>
+                    <p class="service-desc">Creating responsive layouts that work smoothly across all devices using modern CSS frameworks.</p>
+                    <ul class="service-list">
+                        <li class="service-item">Mobile-First Approach</li>
+                        <li class="service-item">Tailwind CSS & SASS</li>
+                        <li class="service-item">Cross-Browser Compatibility</li>
+                    </ul>
                 </div>
+
+                <!-- Service 4 -->
                 <div class="service-card">
                     <div class="service-icon"><i class="fa-solid fa-cart-shopping"></i></div>
-                    <h3 class="service-title">E-commerce Front-End Development</h3>
-                    <p>Developing clean, fast, and scalable e-commerce front-end interfaces focused on performance and
-                        user experience.</p>
+                    <h3 class="service-title">E-commerce Solutions</h3>
+                    <p class="service-desc">Developing clean, fast, and scalable e-commerce interfaces focused on user experience.</p>
+                    <ul class="service-list">
+                        <li class="service-item">Cart & Checkout Logic</li>
+                        <li class="service-item">Product Filtering Systems</li>
+                        <li class="service-item">Payment Gateway UI</li>
+                    </ul>
                 </div>
+
+                <!-- Service 5 -->
                 <div class="service-card">
                     <div class="service-icon"><i class="fa-solid fa-gauge-high"></i></div>
-                    <h3 class="service-title">Performance Optimization</h3>
-                    <p>Improving website speed, rendering performance, and overall user experience through optimization
-                        best practices.</p>
+                    <h3 class="service-title">Performance Tuning</h3>
+                    <p class="service-desc">Improving website speed and rendering performance through optimization best practices.</p>
+                    <ul class="service-list">
+                        <li class="service-item">Code Splitting & Lazy Loading</li>
+                        <li class="service-item">Image & Asset Optimization</li>
+                        <li class="service-item">Core Web Vitals Improvement</li>
+                    </ul>
                 </div>
+
+                <!-- Service 6 -->
                 <div class="service-card">
-                    <div class="service-icon"><i class="fa-solid fa-file-code"></i></div>
-                    <h3 class="service-title">Clean & Maintainable Code</h3>
-                    <p>Writing well-structured, readable, and maintainable code that makes future updates easy after
-                        delivery.</p>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon"><i class="fa-solid fa-link"></i></div>
+                    <div class="service-icon"><i class="fa-solid fa-gauge-high"></i></div>
                     <h3 class="service-title">API Integration</h3>
-                    <p>Integrating REST APIs and handling dynamic data efficiently within React applications.</p>
+                    <p class="service-desc">Integrating REST APIs and handling dynamic data efficiently within web applications.</p>
+                    <ul class="service-list">
+                        <li class="service-item">Real-time Data Fetching</li>
+                        <li class="service-item">TanStack Query Hooks</li>
+                        <li class="service-item">Secure Data Handling</li>
+                    </ul>
                 </div>
             </div>
         </div>
@@ -243,7 +376,7 @@
                 <!-- Project 1: Buyno -->
                 <div class="project-card">
                     <div class="project-visual">
-                        <img src="images/Buyno.png" alt="Buyno E-Commerce Project">
+                        <img src="images/buyno (2).png" alt="Buyno E-Commerce Project">
                     </div>
                     <div class="project-info">
                         <div class="project-tags">
@@ -274,7 +407,7 @@
                 <!-- Project 2: SoicoHub -->
                 <div class="project-card">
                     <div class="project-visual">
-                        <img src="images/SoicoHub.png" alt="SoicoHub Project">
+                        <img src="images/sociohub.png" alt="SoicoHub Project">
                     </div>
                     <div class="project-info">
                         <div class="project-tags">
@@ -306,7 +439,7 @@
                 <!-- Project 3: CMDB -->
                 <div class="project-card">
                     <div class="project-visual">
-                        <img src="images/CMBD.png" alt="CMDB Project">
+                        <img src="images/cmdb.png" alt="CMDB Project">
                     </div>
                     <div class="project-info">
                         <div class="project-tags">
@@ -337,7 +470,7 @@
                 <!-- Project 4: Fresh_Cart -->
                 <div class="project-card">
                     <div class="project-visual">
-                        <img src="images/Fresh_Cart.png" alt="Fresh_Cart Project">
+                        <img src="images/fresh-cart.png" alt="Fresh_Cart Project">
                     </div>
                     <div class="project-info">
                         <div class="project-tags">
@@ -369,7 +502,7 @@
                 <!-- Project 5: Notta -->
                 <div class="project-card">
                     <div class="project-visual">
-                        <img src="images/Notta.png" alt="Notta Project">
+                        <img src="images/notta.png" alt="Notta Project">
                     </div>
                     <div class="project-info">
                         <div class="project-tags">
@@ -400,23 +533,56 @@
         </div>
     </section>
 
-    <!-- 8. Testimonials -->
+    <!-- 8. Achievements -->
+    <section id="achievements">
+        <div class="container">
+            <div class="section-title">Achievements</div>
+            <div class="achievements-grid">
+                <!-- Achievement 1 -->
+                <div class="achievement-card-modern">
+                    <div class="achievement-icon-circle">
+                        <i class="fa-solid fa-graduation-cap"></i>
+                    </div>
+                    <h3>BSc Computer Science</h3>
+                    <div class="school-info">MET Academy — 2024</div>
+                    <p class="achievement-desc">Successfully earned a Bachelor’s degree in Computer Science and Information with specialization in Information Systems.</p>
+                </div>
+
+                <!-- Achievement 2 -->
+                <div class="achievement-card-modern">
+                    <div class="achievement-icon-circle">
+                        <i class="fa-solid fa-certificate"></i>
+                    </div>
+                    <h3>Front-End Development Diploma</h3>
+                    <div class="school-info">Route Academy — 2025</div>
+                    <p class="achievement-desc">Completed an intensive professional program specializing in modern Front-End technologies including React and Next.js.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 9. Testimonials -->
     <section id="testimonials">
         <div class="container">
             <div class="section-title">Testimonials</div>
             <div class="testimonials-grid">
                 <!-- Testimonial 1 -->
                 <div class="testimonial-card">
-                    <div class="testimonial-content">
+                    <div class="testimonial-header">
                         <div class="testimonial-quote">
                             <i class="fa-solid fa-quote-left"></i>
                         </div>
-                        <p class="testimonial-text">Working with Mohamed was an absolute pleasure. He delivered a pixel-perfect React application that exceeded our expectations. His attention to detail and clean code made future updates seamless.</p>
-                    </div>
-                    <div class="testimonial-author">
-                        <div class="testimonial-avatar">
-                            <i class="fa-solid fa-user"></i>
+                        <div class="testimonial-stars">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
                         </div>
+                    </div>
+                    <p class="testimonial-text">"Mohamed transformed our buggy MVP into a high-performance production app. His knowledge of Clean Architecture made scaling our codebase effortless. Truly a top-tier engineer."</p>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar">SJ</div>
                         <div class="testimonial-info">
                             <div class="testimonial-name">Sarah Johnson</div>
                             <div class="testimonial-role">Product Manager, TechCorp</div>
@@ -426,16 +592,21 @@
 
                 <!-- Testimonial 2 -->
                 <div class="testimonial-card">
-                    <div class="testimonial-content">
+                    <div class="testimonial-header">
                         <div class="testimonial-quote">
                             <i class="fa-solid fa-quote-left"></i>
                         </div>
-                        <p class="testimonial-text">Mohamed transformed our e-commerce platform with his expertise in React and TypeScript. The performance improvements were remarkable, and the codebase is now much more maintainable.</p>
-                    </div>
-                    <div class="testimonial-author">
-                        <div class="testimonial-avatar">
-                            <i class="fa-solid fa-user"></i>
+                        <div class="testimonial-stars">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
                         </div>
+                    </div>
+                    <p class="testimonial-text">"Mohamed transformed our e-commerce platform with his expertise in React and TypeScript. The performance improvements were remarkable, and the codebase is now much more maintainable."</p>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar">MC</div>
                         <div class="testimonial-info">
                             <div class="testimonial-name">Michael Chen</div>
                             <div class="testimonial-role">CTO, ShopHub</div>
@@ -445,16 +616,21 @@
 
                 <!-- Testimonial 3 -->
                 <div class="testimonial-card">
-                    <div class="testimonial-content">
+                    <div class="testimonial-header">
                         <div class="testimonial-quote">
                             <i class="fa-solid fa-quote-left"></i>
                         </div>
-                        <p class="testimonial-text">Professional, responsive, and highly skilled. Mohamed converted our complex Figma designs into a beautiful, responsive web application. I highly recommend his services!</p>
-                    </div>
-                    <div class="testimonial-author">
-                        <div class="testimonial-avatar">
-                            <i class="fa-solid fa-user"></i>
+                        <div class="testimonial-stars">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
                         </div>
+                    </div>
+                    <p class="testimonial-text">"Professional, responsive, and highly skilled. Mohamed converted our complex Figma designs into a beautiful, responsive web application. I highly recommend his services!"</p>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar">ER</div>
                         <div class="testimonial-info">
                             <div class="testimonial-name">Emily Rodriguez</div>
                             <div class="testimonial-role">Design Lead, CreativeStudio</div>
@@ -465,7 +641,7 @@
         </div>
     </section>
 
-    <!-- 9. Contact -->
+    <!-- 10. Contact -->
     <section id="contact">
         <div class="container">
             <div class="section-title">Get in Touch</div>
