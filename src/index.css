@@ -24,6 +24,9 @@
 
     /* Animations */
     --transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+
+    /* Fonts */
+    --font-main: 'Outfit', sans-serif;
 }
 
 .light-mode {
@@ -853,6 +856,51 @@ h1 span.gradient-text {
     margin-top: 60px;
 }
 
+/* Work Experience */
+.work-exp-item {
+    border-left: 2px solid var(--color-primary);
+    padding-left: 30px;
+    margin-bottom: 40px;
+    position: relative;
+}
+
+.work-exp-item::before {
+    content: '';
+    position: absolute;
+    left: -6px;
+    top: 0;
+    width: 10px;
+    height: 10px;
+    background: var(--color-bg);
+    border: 2px solid var(--color-primary);
+    border-radius: 50%;
+}
+
+.work-exp-year {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--color-primary);
+    margin-bottom: 5px;
+}
+
+.work-exp-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+.work-exp-company {
+    font-size: 1rem;
+    color: var(--color-text-muted);
+    margin-bottom: 12px;
+}
+
+.work-exp-desc {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: var(--color-text-muted);
+}
+
 .skill-icon-fa {
     font-size: 40px;
     width: 40px;
@@ -935,14 +983,6 @@ h1 span.gradient-text {
     display: flex;
     align-items: center;
     gap: 12px;
-}
-
-.service-item::before {
-    content: "\f111";
-    font-family: "Font Awesome 6 Free";
-    font-weight: 900;
-    font-size: 6px;
-    color: var(--color-primary);
 }
 
 /* Projects */
@@ -1654,6 +1694,16 @@ button[type="submit"]:disabled {
         font-size: 1.3rem;
     }
 
+    /* Work Experience Section */
+    .work-exp-item {
+        padding-left: 25px;
+        margin-bottom: 30px;
+    }
+
+    .work-exp-title {
+        font-size: 1.3rem;
+    }
+
     /* Skills Section */
     .skills-grid {
         grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
@@ -1758,7 +1808,7 @@ button[type="submit"]:disabled {
 .btn-glass {
     background: rgba(255, 255, 255, 0.05);
     border: 1px solid rgba(255, 255, 255, 0.1);
-    color: var(--color-text);
+    color: var(--color-text-main);
     backdrop-filter: blur(10px);
 }
 
@@ -1867,13 +1917,6 @@ button[type="submit"]:disabled {
     background: rgba(255, 255, 255, 0.05);
 }
 
-.modal-body li::before {
-    content: "\f058";
-    font-family: "Font Awesome 6 Free";
-    font-weight: 900;
-    color: var(--color-primary);
-    font-size: 1rem;
-}
 
 
 .modal-body li:last-child {
@@ -2050,6 +2093,20 @@ button[type="submit"]:disabled {
     }
 
     .edu-degree {
+        font-size: 1.1rem;
+    }
+
+    /* Work Experience */
+    .work-exp-item {
+        padding-left: 20px;
+        margin-bottom: 25px;
+    }
+
+    .work-exp-year {
+        font-size: 0.85rem;
+    }
+
+    .work-exp-title {
         font-size: 1.1rem;
     }
 

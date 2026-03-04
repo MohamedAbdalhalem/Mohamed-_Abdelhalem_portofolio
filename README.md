@@ -1,55 +1,50 @@
-# Personal Portfolio Website
+# React + TypeScript + Vite
 
-A modern, responsive portfolio for **Mohamed Abdelhalem**, a Frontend Developer, showcasing projects, skills, and experience.
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-## 🌟 Features
+Currently, two official plugins are available:
 
-- Dark & Light Mode Toggle
-- Fully Responsive Design
-- Smooth Scrolling Navigation
-- Mobile Menu
-- Scroll Animations
-- Multiple Sections: Hero, About, Education, Skills, Services, Projects, Achievements, Testimonials, Contact
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
-## 🛠️ Tech Stack
+## Expanding the ESLint configuration
 
-- HTML5, CSS3, Vanilla JavaScript
-- Font Awesome 6.4.0 Icons
-- Google Fonts (Outfit)
+If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
 
-## 📁 Project Structure
+- Configure the top-level `parserOptions` property like this:
 
-```
-├── index.html
-├── css/style.css
-├── js/main.js
-├── icons/
-└── images/
+```js
+export default tseslint.config({
+  languageOptions: {
+    // other options...
+    parserOptions: {
+      project: ['./tsconfig.node.json', './tsconfig.app.json'],
+      tsconfigRootDir: import.meta.dirname,
+    },
+  },
+})
 ```
 
-## 🚀 Getting Started
+- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
+- Optionally add `...tseslint.configs.stylisticTypeChecked`
+- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
 
-Simply open `index.html` in a web browser, or use a local server:
+```js
+// eslint.config.js
+import react from 'eslint-plugin-react'
 
-```bash
-python -m http.server 8000
-# Navigate to http://localhost:8000
+export default tseslint.config({
+  // Set the react version
+  settings: { react: { version: '18.3' } },
+  plugins: {
+    // Add the react plugin
+    react,
+  },
+  rules: {
+    // other rules...
+    // Enable its recommended rules
+    ...react.configs.recommended.rules,
+    ...react.configs['jsx-runtime'].rules,
+  },
+})
 ```
-
-## 🎨 Customization
-
-Edit CSS variables in `css/style.css`:
-
-```css
---color-bg: #030712;
---color-primary: #2b7fff;
---color-text-main: #f9fafb;
-```
-
-Update personal info in `index.html`.
-
-## 📬 Contact
-
-- **Email** - mohamed3ab7alem@gmail.com
-- **LinkedIn** - [linkedin.com/in/mohamed-abdelhalem](https://www.linkedin.com/in/mohamed-abdelhalem-a158922a6/)
-- **GitHub** - [github.com/MohamedAbdalhalem](https://github.com/MohamedAbdalhalem)
