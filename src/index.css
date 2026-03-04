@@ -1536,7 +1536,8 @@ button[type="submit"]:disabled {
     }
 
     nav.active {
-        max-height: 400px;
+        max-height: 500px;
+        /* height: max-content !important; */
         opacity: 1;
     }
 
