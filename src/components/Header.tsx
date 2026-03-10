@@ -75,7 +75,7 @@ const Header = () => {
           >
             <i className={`fa-solid ${theme === 'light' ? 'fa-moon' : 'fa-sun'}`} />
           </button>
-          <a href="#contact" className="btn btn-white">
+          <a href="#contact" className="btn btn-white nav-btn">
             <i className="fa-solid fa-paper-plane" style={{ marginRight: '8px' }}></i>
             Let&apos;s Talk
           </a>

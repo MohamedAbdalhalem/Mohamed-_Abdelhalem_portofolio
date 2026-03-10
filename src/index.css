@@ -1423,6 +1423,22 @@ button[type="submit"]:disabled {
 }
 
 /* Responsive */
+/* Laptop Adjustments */
+@media (max-width: 1100px) {
+    .container {
+        padding: 0 30px;
+    }
+
+    nav ul {
+        gap: 12px;
+    }
+
+    .nav-btn {
+        padding: 10px 22px;
+        font-size: 0.9rem;
+    }
+}
+
 /* Tablet Styles */
 @media (max-width: 1024px) {
     .section-title {
@@ -1490,6 +1506,15 @@ button[type="submit"]:disabled {
         width: 380px;
         height: 380px;
     }
+
+    /* Intermediate link spacing for medium screens */
+    nav ul {
+        gap: 10px;
+    }
+
+    nav a {
+        font-size: 0.85rem;
+    }
 }
 
 /* Mobile and Tablet Styles */
@@ -1512,6 +1537,15 @@ button[type="submit"]:disabled {
         width: 36px;
         height: 36px;
         font-size: 1.1rem;
+    }
+
+    .nav-btn {
+        padding: 8px 18px;
+        font-size: 0.85rem;
+    }
+
+    .nav-btn i {
+        display: none;
     }
 
     nav {
@@ -1557,8 +1591,15 @@ button[type="submit"]:disabled {
 
     nav a {
         display: block;
-        padding: 15px 0;
+        padding: 12px 10px;
         font-size: 1rem;
+        font-weight: 500;
+        border-radius: 8px;
+    }
+
+    nav a:hover {
+        background: rgba(43, 127, 255, 0.05);
+        padding-left: 20px;
     }
 
     /* Cover/Hero Section */
@@ -1797,6 +1838,22 @@ button[type="submit"]:disabled {
 
     #contact {
         margin-top: 60px;
+    }
+
+    /* Small Mobile Adjustments within 900px */
+    @media (max-width: 480px) {
+        .logo {
+            font-size: 1.5rem;
+        }
+
+        .header-content {
+            gap: 5px;
+        }
+
+        .nav-btn {
+            padding: 10px 15px;
+            font-size: 0.8rem;
+        }
     }
 
     /* Footer */
