@@ -24,7 +24,7 @@ const About = () => {
               that solve real-world problems.
             </p>
 
-            <div className="stats-grid">
+            {/* <div className="stats-grid">
               <div className="stat-card">
                 <i className="fa-solid fa-folder-open" style={{ fontSize: '1.5rem', marginBottom: '8px', opacity: 0.9 }}></i>
                 <div className="stat-num">20+</div>
@@ -40,7 +40,7 @@ const About = () => {
                 <div className="stat-num">5+</div>
                 <div className="stat-label">Years Experience</div>
               </div>
-            </div>
+            </div> */}
           </div>
 
           <div className="features-grid">

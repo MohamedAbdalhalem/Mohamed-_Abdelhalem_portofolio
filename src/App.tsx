@@ -46,11 +46,11 @@ function App() {
       <About />
       <Education />
       <Skills />
-      <WorkExperience />
+      {/* <WorkExperience /> */}
       <Services />
       <Projects />
       <Achievements />
-      <Testimonials />
+      {/* <Testimonials /> */}
       <Contact />
       <Footer />
     </>
