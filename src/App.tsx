@@ -13,6 +13,8 @@ import Achievements from './components/Achievements'
 // import Testimonials from './components/Testimonials'
 import Contact from './components/Contact'
 import Footer from './components/Footer'
+import WorkExperience from './components/WorkExperience'
+import Testimonials from './components/Testimonials'
 
 function App() {
   useEffect(() => {
@@ -46,11 +48,11 @@ function App() {
       <About />
       <Education />
       <Skills />
-      {/* <WorkExperience /> */}
+      <WorkExperience /> 
       <Services />
       <Projects />
       <Achievements />
-      {/* <Testimonials /> */}
+      <Testimonials />
       <Contact />
       <Footer />
     </>
