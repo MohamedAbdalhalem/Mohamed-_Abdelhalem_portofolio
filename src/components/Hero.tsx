@@ -15,17 +15,22 @@ const Hero = () => {
               Mohamed <span className="gradient-text">Abdelhalem.</span>
             </h1>
             <p className="hero-subtitle">Frontend Developer</p>
-            <p className="hero-title">I help Businesses avoid future technical</p>
+            <p className="hero-title">
+              I help Businesses avoid future technical
+            </p>
             <div className="hero-cta">
               <a
-                href="Mohamed_Abdalhalim_Ali_CV .pdf"
+                href="Mohamed_Abdalhalim_CV.pdf"
                 download
                 className="btn btn-primary"
               >
                 Download CV <i className="fa-solid fa-download"></i>
               </a>
               <a href="#projects" className="btn btn-outline">
-                <i className="fa-solid fa-folder-open" style={{ marginRight: '8px' }}></i>
+                <i
+                  className="fa-solid fa-folder-open"
+                  style={{ marginRight: "8px" }}
+                ></i>
                 View Projects
               </a>
             </div>
@@ -62,8 +67,7 @@ const Hero = () => {
         </div>
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default Hero
-
+export default Hero;
