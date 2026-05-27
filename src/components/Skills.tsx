@@ -61,33 +61,7 @@ const frontendSkills = [
   },
 ]
 
-const softSkills = [
-  {
-    icon: 'fa-comments',
-    name: 'Effective Communication',
-    desc: 'Confident and clear interaction with stakeholders and teammates.',
-  },
-  {
-    icon: 'fa-users-gear',
-    name: 'Team Collaboration',
-    desc: 'Contributing effectively within cross-functional and Agile teams.',
-  },
-  {
-    icon: 'fa-lightbulb',
-    name: 'Problem Solving',
-    desc: 'Analytical thinking to resolve complex technical and UX challenges.',
-  },
-  {
-    icon: 'fa-arrows-rotate',
-    name: 'Adaptability',
-    desc: 'Quickly pivoting to new tools, frameworks, and project requirements.',
-  },
-  {
-    icon: 'fa-clock',
-    name: 'Time Management',
-    desc: 'Organizing tasks and meeting deadlines in high-pressure environments.',
-  },
-]
+
 
 const Skills = () => {
   return (
@@ -99,10 +73,7 @@ const Skills = () => {
         </div>
         <div className="skills-container">
           <div className="skills-category">
-            <h3 className="skills-subtitle">
-              <i className="fa-solid fa-laptop-code" style={{ marginRight: '10px' }}></i>
-              Frontend Skills
-            </h3>
+            
             <div className="skills-grid">
               {frontendSkills.map((skill) => (
                 <div className="skill-tag" key={skill.name}>
@@ -119,21 +90,7 @@ const Skills = () => {
             </div>
           </div>
 
-          <div className="skills-category">
-            <h3 className="skills-subtitle">
-              <i className="fa-solid fa-people-group" style={{ marginRight: '10px' }}></i>
-              Communication Skills
-            </h3>
-            <div className="skills-grid">
-              {softSkills.map((skill) => (
-                <div className="skill-tag" key={skill.name}>
-                  <i className={`fa-solid ${skill.icon} skill-icon-fa`}></i>
-                  <div className="skill-name">{skill.name}</div>
-                  <p className="skill-desc">{skill.desc}</p>
-                </div>
-              ))}
-            </div>
-          </div>
+          
         </div>
       </div>
     </section>
