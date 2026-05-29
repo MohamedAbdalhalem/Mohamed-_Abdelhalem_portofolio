@@ -8,6 +8,7 @@ import cmdbImg from "../assets/cmdb.png";
 import freshCartImg from "../assets/fresh-cart.png";
 import nottaImg from "../assets/notta-app.png";
 import LUMIÈREImg from "../assets/Beige New Product Mockup Now Available Facebook Post.png";
+import FoodeiesImg from "../assets/Foodies.png";
 // Placeholder when image fails to load
 
 type Project = {
@@ -17,8 +18,8 @@ type Project = {
   tags: string[];
   description: string;
   github: string;
-  live: string;
   features: string[];
+  live: string | undefined;
 };
 
 const projects: Project[] = [
@@ -55,11 +56,30 @@ const projects: Project[] = [
       "Shopping Cart Management",
       "Checkout & Address Management",
       "Order Tracking & History",
-      "Reviews & Ratings"
+      "Reviews & Ratings",
     ],
     github: "https://github.com/MohamedAbdalhalem/LUMI-RE",
     live: "https://lumi-re-inky.vercel.app/",
     tags: ["React", "JavaScript", "Tailwind"],
+  },
+  {
+    id: "Foodies",
+    title: "Foodies",
+    image: FoodeiesImg,
+    description:
+      "Foodies is a responsive Next.js starter project for browsing meals, sharing recipes, and joining a food-loving community.",
+    features: [
+      "Server Actions",
+      "Server Components",
+      "Atomic Design",
+      "Meals browsing",
+      "Recipe detail view",
+      "Recipe sharing form",
+      "Landing page experience",
+    ],
+    github: "https://github.com/MohamedAbdalhalem/Foodies",
+    live: undefined,
+    tags: ["Next.js", "JavaScript", "Css Modules"],
   },
   {
     id: "cmdb",
@@ -86,7 +106,7 @@ const projects: Project[] = [
     tags: ["Next.js", "Material UI", "TypeScript"],
     description: "Social app for users to post, comment, and manage profiles.",
     github: "https://github.com/MohamedAbdalhalem/SoicoHub",
-    live: "https://soico-hub.vercel.app/",
+    live: undefined,
     features: [
       "Login & Signup with form validation",
       "Home Page feed and post creation",
@@ -192,8 +212,8 @@ const Projects = () => {
                   className="project-links"
                   style={{
                     display: "grid",
-                    gridTemplateColumns: "repeat(2, 1fr)",
-                    gap: "10px",
+                    gridTemplateColumns: `${project.live ? "repeat(2, 1fr)" : "repeat(1,1fr)"} `,
+                    gap: `${project.live ? "10px" : "10px 0px"} `,
                   }}
                 >
                   <a
@@ -209,19 +229,22 @@ const Projects = () => {
                   >
                     <i className="fa-brands fa-github"></i> GitHub
                   </a>
-                  <a
-                    href={project.live}
-                    target="_blank"
-                    rel="noreferrer"
-                    className="btn btn-primary"
-                    style={{
-                      padding: "10px",
-                      fontSize: "0.85rem",
-                      textAlign: "center",
-                    }}
-                  >
-                    <i className="fa-solid fa-external-link-alt"></i> Live Demo
-                  </a>
+                  {project.live && (
+                    <a
+                      href={project.live}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="btn btn-primary"
+                      style={{
+                        padding: "10px",
+                        fontSize: "0.85rem",
+                        textAlign: "center",
+                      }}
+                    >
+                      <i className="fa-solid fa-external-link-alt"></i> Live
+                      Demo
+                    </a>
+                  )}
                   <button
                     className="btn btn-glass btn-features"
                     style={{
