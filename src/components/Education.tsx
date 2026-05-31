@@ -148,8 +148,8 @@ const Education = () => {
                 02/2026 – 05/2026
               </div>
               <div className="edu-degree">
-                {/* <a
-                  href="https://drive.google.com/file/d/1q5VCvPVTmwu_qTWMI9PN9KGLmbJ6D4L8/view?usp=sharing"
+                <a
+                  href="https://drive.google.com/file/d/1oRKxsuT332POH4Lmpzoapwkfg7AI04Fi/view?usp=drive_link"
                   target="_blank"
                   rel="noreferrer"
                   style={{
@@ -157,13 +157,13 @@ const Education = () => {
                     color: "inherit",
                     transition: "var(--transition)",
                   }}
-                > */}
+                >
                 <i
                   className="fa-solid fa-certificate"
                   style={{ marginRight: "6px" }}
                 ></i>
                 React - The Complete Guide (incl. Next.js, Redux)
-                {/* </a> */}
+                </a>
               </div>
               <div className="edu-school">
                 <i
