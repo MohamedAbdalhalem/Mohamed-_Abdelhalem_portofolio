@@ -9,6 +9,7 @@ import freshCartImg from "../assets/fresh-cart.png";
 import nottaImg from "../assets/notta-app.png";
 import LUMIÈREImg from "../assets/Beige New Product Mockup Now Available Facebook Post.png";
 import FoodeiesImg from "../assets/Foodies.png";
+import NewNowImg from "../assets/NewsNow.png";
 // Placeholder when image fails to load
 
 type Project = {
@@ -61,6 +62,25 @@ const projects: Project[] = [
     github: "https://github.com/MohamedAbdalhalem/LUMI-RE",
     live: "https://lumi-re-inky.vercel.app/",
     tags: ["React", "JavaScript", "Tailwind"],
+  },
+  {
+    id: "New-Now",
+    title: "New_Now",
+    image: NewNowImg,
+    tags: ["Next.js", "TypeScript", "FCM"],
+    description:
+      "NewsNow is a modern news app for the latest headlines. It features Firebase push notifications, responsive design, and multiple themes.",
+    features: [
+      "Server Actions , Server Components",
+      "Browse top headlines on the homepage",
+      "Explore news by category",
+      "Search articles by keyword",
+      "View article details in a dedicated page",
+      "Theme toggle with light/dark/system options",
+      "Firebase-based push notification support",
+    ],
+    github: "https://github.com/MohamedAbdalhalem/News-Now",
+    live: "https://news-now-chi.vercel.app/",
   },
   {
     id: "Foodies",
@@ -187,7 +207,11 @@ const Projects = () => {
           {projects.map((project) => (
             <div className="project-card" key={project.id}>
               <div className="project-visual">
-                <img src={project.image} alt={project.title} />
+                <img
+                  src={project.image}
+                  alt={project.title}
+                  style={{ objectFit: "cover", width: "100%" }}
+                />
               </div>
               <div className="project-info">
                 <div className="project-tags">
