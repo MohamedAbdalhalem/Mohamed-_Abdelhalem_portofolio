@@ -20,7 +20,7 @@ const Hero = () => {
             </p>
             <div className="hero-cta">
               <a
-                href="Mohamed_Abdalhalim_CV.pdf"
+                href="Mohamed_Abdalhalim_Ali.pdf"
                 download
                 className="btn btn-primary"
               >
