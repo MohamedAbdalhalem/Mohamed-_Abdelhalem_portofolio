@@ -158,11 +158,11 @@ const Education = () => {
                     transition: "var(--transition)",
                   }}
                 >
-                <i
-                  className="fa-solid fa-certificate"
-                  style={{ marginRight: "6px" }}
-                ></i>
-                React - The Complete Guide (incl. Next.js, Redux)
+                  <i
+                    className="fa-solid fa-certificate"
+                    style={{ marginRight: "6px" }}
+                  ></i>
+                  React - The Complete Guide (incl. Next.js, Redux)
                 </a>
               </div>
               <div className="edu-school">
@@ -182,10 +182,66 @@ const Education = () => {
                 }}
               >
                 <li>
-                  Comprehensive coverage of React from scratch including Hooks, Redux, React Router, Next.js, and best practices.
+                  Comprehensive coverage of React from scratch including Hooks,
+                  Redux, React Router, Next.js, and best practices.
                 </li>
                 <li>
-                  Hands-on coding exercises, assignments, and demo projects including a frontend app with Next.js.
+                  Hands-on coding exercises, assignments, and demo projects
+                  including a frontend app with Next.js.
+                </li>
+              </ul>
+            </div>
+            <div className="edu-item">
+              <div className="edu-year">
+                <i
+                  className="fa-solid fa-calendar-days"
+                  style={{ marginRight: "6px" }}
+                ></i>
+                06/2026 – 07/2026
+              </div>
+              <div className="edu-degree">
+                <a
+                  href="https://drive.google.com/file/d/1xZKWlEcAJo6jVrQNbMhzuaT4mOLYqgPM/view?usp=drive_link"
+                  target="_blank"
+                  rel="noreferrer"
+                  style={{
+                    textDecoration: "none",
+                    color: "inherit",
+                    transition: "var(--transition)",
+                  }}
+                >
+                  <i
+                    className="fa-solid fa-certificate"
+                    style={{ marginRight: "6px" }}
+                  ></i>
+                  C Programming From Basics to Mastery
+                </a>
+              </div>
+              <div className="edu-school">
+                <i
+                  className="fa-solid fa-school"
+                  style={{ marginRight: "6px" }}
+                ></i>
+                Mahara Tech
+              </div>
+              <ul
+                style={{
+                  marginTop: "10px",
+                  paddingLeft: "20px",
+                  listStyleType: "disc",
+                  color: "var(--color-text-muted)",
+                  fontSize: "0.9rem",
+                }}
+              >
+                <li>
+                  Comprehensive coverage of C fundamentals including data types,
+                  operators, pointers, arrays, structures, and dynamic memory
+                  allocation.
+                </li>
+                <li>
+                  Hands-on coding exercises covering the full compilation
+                  process, memory management, and low-level programming
+                  concepts.
                 </li>
               </ul>
             </div>
