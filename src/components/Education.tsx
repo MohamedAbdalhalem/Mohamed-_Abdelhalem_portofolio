@@ -201,7 +201,7 @@ const Education = () => {
               </div>
               <div className="edu-degree">
                 <a
-                  href="https://drive.google.com/file/d/1xZKWlEcAJo6jVrQNbMhzuaT4mOLYqgPM/view?usp=drive_link"
+                  href="https://maharatech.gov.eg/mod/customcert/view.php?id=16004&downloadown=1"
                   target="_blank"
                   rel="noreferrer"
                   style={{
@@ -242,6 +242,60 @@ const Education = () => {
                   Hands-on coding exercises covering the full compilation
                   process, memory management, and low-level programming
                   concepts.
+                </li>
+              </ul>
+            </div>
+            <div className="edu-item">
+              <div className="edu-year">
+                <i
+                  className="fa-solid fa-calendar-days"
+                  style={{ marginRight: "6px" }}
+                ></i>
+                07/2026 – 07/2026
+              </div>
+              <div className="edu-degree">
+                <a
+                  href="https://maharatech.gov.eg/mod/customcert/view.php?id=8663&downloadown=1"
+                  target="_blank"
+                  rel="noreferrer"
+                  style={{
+                    textDecoration: "none",
+                    color: "inherit",
+                    transition: "var(--transition)",
+                  }}
+                >
+                  <i
+                    className="fa-solid fa-certificate"
+                    style={{ marginRight: "6px" }}
+                  ></i>
+                  TypeScript Fundamentals
+                </a>
+              </div>
+              <div className="edu-school">
+                <i
+                  className="fa-solid fa-school"
+                  style={{ marginRight: "6px" }}
+                ></i>
+                Mahara Tech
+              </div>
+              <ul
+                style={{
+                  marginTop: "10px",
+                  paddingLeft: "20px",
+                  listStyleType: "disc",
+                  color: "var(--color-text-muted)",
+                  fontSize: "0.9rem",
+                }}
+              >
+                <li>
+                  Comprehensive coverage of TypeScript fundamentals including
+                  static typing, generics, enums, interfaces, and class
+                  inheritance.
+                </li>
+                <li>
+                  Hands-on coding exercises covering type aliases, object
+                  structuring, and function typing for safer, more maintainable
+                  code.
                 </li>
               </ul>
             </div>
