@@ -15,20 +15,17 @@ const WorkExperience = () => {
               </div>
               <div className="work-exp-title">
                 <i className="fa-solid fa-code" style={{ marginRight: '8px' }}></i>
-                Frontend Developer
+                Frontend Developer Intern
               </div>
               <div className="work-exp-company">
                 <i className="fa-solid fa-building" style={{ marginRight: '6px' }}></i>
-                Internship, Remote
+                Omnicore AI — Remote
               </div>
               <p className="work-exp-desc">
-                Building responsive web applications with React and Next.js. Collaborating with
-                designers and backend teams to deliver high-performance, user-friendly interfaces.
-                Implemented state management with Redux and integrated REST APIs for several client
-                projects.
+                Built hands-on experience with React state management (Zustand, TanStack Query), Next.js (App Router, Server Components), form validation (React Hook Form + Zod), and TypeScript, alongside animation libraries and performance optimization (ISR/SSG).
               </p>
             </div>
-            
+
           </div>
         </div>
       </div>
