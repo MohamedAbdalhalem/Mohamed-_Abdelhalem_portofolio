@@ -197,6 +197,56 @@ const Education = () => {
                   className="fa-solid fa-calendar-days"
                   style={{ marginRight: "6px" }}
                 ></i>
+                06/2026 – 09/2026
+              </div>
+              <div className="edu-degree">
+                <a
+                  href="https://udemy-certificate.s3.amazonaws.com/image/UC-35151c08-8882-44a6-946a-85b4802f3e80.jpg"
+                  target="_blank"
+                  rel="noreferrer"
+                  style={{
+                    textDecoration: "none",
+                    color: "inherit",
+                    transition: "var(--transition)",
+                  }}
+                >
+                  <i
+                    className="fa-solid fa-certificate"
+                    style={{ marginRight: "6px" }}
+                  ></i>
+                  The Complete JavaScript Course 2025: From Zero to Expert!
+                </a>
+              </div>
+              <div className="edu-school">
+                <i
+                  className="fa-solid fa-school"
+                  style={{ marginRight: "6px" }}
+                ></i>
+                 Udemy - Jonas Schmedtmann
+              </div>
+              <ul
+                style={{
+                  marginTop: "10px",
+                  paddingLeft: "20px",
+                  listStyleType: "disc",
+                  color: "var(--color-text-muted)",
+                  fontSize: "0.9rem",
+                }}
+              >
+                <li>
+                  Explored how JavaScript works behind the scenes, covering the JS engine and runtime, execution contexts and the call stack, scope chain, hoisting and the TDZ, the this keyword, and memory management (primitives vs. objects, garbage collection).
+                </li>
+                <li>
+                 Covered core JavaScript in depth: closures, prototypal inheritance, OOP, the event loop, and asynchronous programming (Promises, Fetch API, AJAX).
+                </li>
+              </ul>
+            </div>
+            <div className="edu-item">
+              <div className="edu-year">
+                <i
+                  className="fa-solid fa-calendar-days"
+                  style={{ marginRight: "6px" }}
+                ></i>
                 06/2026 – 07/2026
               </div>
               <div className="edu-degree">

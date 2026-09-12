@@ -4,15 +4,14 @@ import Hero from "./components/Hero";
 import About from "./components/About";
 import Education from "./components/Education";
 import Skills from "./components/Skills";
-// import WorkExperience from './components/WorkExperience'
+import WorkExperience from './components/WorkExperience'
 import Services from "./components/Services";
 import Projects from "./components/Projects";
 // import Achievements from './components/Achievements'
 // import Testimonials from './components/Testimonials'
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
-// import WorkExperience from './components/WorkExperience'
-// import Testimonials from './components/Testimonials'
+
 
 function App() {
   useEffect(() => {
@@ -46,7 +45,7 @@ function App() {
       <About />
       <Education />
       <Skills />
-      {/* <WorkExperience />  */}
+      <WorkExperience /> 
       <Services />
       <Projects />
       {/* <Achievements /> */}
